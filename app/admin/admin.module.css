@@ -1,0 +1,25 @@
+.page { min-height: 100vh; padding: 32px clamp(16px, 5vw, 64px) 64px; max-width: 1100px; margin: 0 auto; }
+.top { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: space-between; margin-bottom: 32px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-stretch: 118%; letter-spacing: .08em; font-size: 15px; }
+.led { width: 8px; height: 8px; border-radius: 50%; background: #4be37a; box-shadow: 0 0 12px #4be37a; }
+.actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.small { min-height: 40px !important; padding: 0 16px !important; font-size: 14px !important; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; margin-bottom: 28px; }
+.stat { background: #16181a; border: 1px solid rgba(255,255,255,.08); border-radius: 14px; padding: 18px 20px; }
+.statLabel { font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8e969e; }
+.statValue { font-size: 34px; font-weight: 750; font-stretch: 112%; margin-top: 6px; }
+.card { background: #16181a; border: 1px solid rgba(255,255,255,.08); border-radius: 14px; overflow: hidden; }
+.tableWrap { overflow-x: auto; }
+.table { width: 100%; border-collapse: collapse; font-size: 15px; }
+.table th { text-align: left; font-weight: 500; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: #8e969e; padding: 14px 20px; border-bottom: 1px solid rgba(255,255,255,.08); white-space: nowrap; }
+.table td { padding: 12px 20px; border-bottom: 1px solid rgba(255,255,255,.05); white-space: nowrap; }
+.table tr:last-child td { border-bottom: 0; }
+.num { color: #6c737a; width: 1%; }
+.date { color: #a9b0b7; }
+.del { background: transparent; border: 1px solid rgba(255,255,255,.14); color: #a9b0b7; border-radius: 8px; padding: 6px 12px; font: inherit; font-size: 13px; cursor: pointer; }
+.del:hover { border-color: #ff7a6b; color: #ff7a6b; }
+.empty { padding: 48px 20px; text-align: center; color: #8e969e; }
+.loginWrap { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 16px; }
+.loginCard { width: 100%; max-width: 420px; background: #16181a; border: 1px solid rgba(255,255,255,.1); border-radius: 16px; padding: 32px clamp(20px, 5vw, 36px); display: flex; flex-direction: column; gap: 20px; }
+.h1 { margin: 0; font-size: 30px; line-height: 1; font-weight: 750; font-stretch: 112%; letter-spacing: -.015em; }
+.error { color: #ff7a6b; font-size: 14px; margin: 0; }
