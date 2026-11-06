@@ -8,8 +8,16 @@ declare global {
 
 function getSql() {
   if (!globalThis.__trailmateSql) {
-    const url = process.env.DATABASE_URL;
-    if (!url) throw new Error("DATABASE_URL is not set");
+    // Neon on Vercel may expose the connection string under different names
+    // depending on how the integration was connected.
+    const url =
+      process.env.DATABASE_URL ||
+      process.env.POSTGRES_URL ||
+      process.env.DATABASE_URL_UNPOOLED ||
+      process.env.POSTGRES_URL_NON_POOLING;
+    if (!url) {
+      throw new Error("No database URL set (DATABASE_URL / POSTGRES_URL / DATABASE_URL_UNPOOLED)");
+    }
     const local = /localhost|127\.0\.0\.1/.test(url);
     globalThis.__trailmateSql = postgres(url, {
       ssl: local ? false : "require",
